@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>CinemaDrip/Home Page/Non-SignUp</title>
+  </head>
+  <body>
+    <!-- hero section parent div -->
+    <div
+      style="
+        background-image: url(../Images/BG.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+      "
+    >
+      <!-- navigation component -->
+      <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+        <div class="flex justify-between items-center py-6 mx-20 max-md:mx-4">
+          <!-- nav links -->
+          <button class="max-md:block hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill=""
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
+          <div class="flex gap-5 max-md:hidden">
+            <a href="#" class="font-semibold capitalize">Home</a>
+            <a href="#" class="font-semibold capitalize">blogs</a>
+            <a href="#" class="font-semibold capitalize">podcast</a>
+            <a href="#" class="font-semibold capitalize">spotlight series</a>
+          </div>
+          <!-- logo -->
+          <div class="">
+            <img
+              src="/Images/logo.png"
+              alt="cinemadrip logo"
+              width="100"
+              height="100"
+              class="m-auto block"
+            />
+          </div>
+          <!-- login/singup buttons -->
+          <div class="flex items-center gap-2">
+            <!-- search icon -->
+            <button>
+              <img
+                src="/Images/searchIcon.png"
+                width="100"
+                height="100"
+                alt="cinema drip search icon"
+                class="w-12"
+              />
+            </button>
+            <!-- login button -->
+            <div
+              class="rounded-full bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
+            >
+              <button
+                class="bg-white text-blue-400 px-10 py-3 m-[3px] uppercase rounded-full ppoppins"
+              >
+                log in
+              </button>
+            </div>
+            <!-- singup button -->
+            <button
+              class="shadow-lg px-10 poppins py-4 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
+            >
+              sign up
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero section component -->
+      <div
+        class="grid grid-cols-7 place-content-between mt-5 max-md:grid-cols-1 max-md:m-2"
+      >
+        <!-- left side cards -->
+        <div
+          class="col-span-2 max-md:col-span-1 max-md:order-2 max-md:flex flex-col gap-4 max-md:mt-5"
+        >
+          <!-- card no : 1 -->
+          <div
+            class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:rotate-25 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+          >
+            <img
+              src="/Images/cardthumbnail.png"
+              class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+            />
+            <div>
+              <h1
+                class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+              >
+                TV seris
+              </h1>
+              <p
+                class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+              >
+                X-Men 97 exclusive look reveals legacy costumes, the james
+              </p>
+            </div>
+          </div>
+          <!-- just typhography -->
+          <h1
+            style="-webkit-text-stroke: 2px #807ee9"
+            class="text-[50px] text-transparent absolute font-extrabold -rotate-90 bg-clip-text text- poppins max-md:hidden"
+          >
+            Just
+          </h1>
+          <!-- card no : 2 -->
+          <div
+            class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:m-12 md:-rotate-25 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+          >
+            <img
+              src="/Images/cardthumbnail.png"
+              class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+            />
+            <div>
+              <h1
+                class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+              >
+                TV seris
+              </h1>
+              <p
+                class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+              >
+                X-Men 97 exclusive look reveals legacy costumes, the james
+              </p>
+            </div>
+          </div>
+          <!-- dropped typhography -->
+          <h1
+            style="-webkit-text-stroke: 2px #807ee9"
+            class="text-[50px] text-transparent absolute left-60 font-extrabold rotate-90 bg-clip-text text- poppins max-md:hidden"
+          >
+            Dropped
+          </h1>
+          <!-- card no : 3 -->
+          <div
+            class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:rotate-25 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+          >
+            <img
+              src="/Images/cardthumbnail.png"
+              class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+            />
+            <div>
+              <h1
+                class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+              >
+                TV seris
+              </h1>
+              <p
+                class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+              >
+                X-Men 97 exclusive look reveals legacy costumes, the james
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- intro side -->
+        <div class="col-span-3 max-md:col-span-1">
+          <img
+            src="/Images/cinemaDripTypho.png"
+            width="1000"
+            height="1000"
+            class="w-4/6 m-auto block mt-20"
+          />
+          <p
+            class="text-center mt-5 font-[200] text-[#011826] text-[34px] max-md:text-xl max-sm:text-lg capitalize"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere dui
+            vitae sem. Gravida tristique aliquam ut.
+          </p>
+          <!-- singup button -->
+          <button
+            class="shadow-lg text-lg font-semibold px-20 max-sm:px-10 max-sm:py-3 max-sm:text-sm m-auto block mt-2 poppins py-4 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase text-white"
+          >
+            sign up
+          </button>
+          <p class="text-xl font-medium mt-5 poppins capitalize text-center">
+            It's completely free to get started
+          </p>
+        </div>
+
+        <!-- right side cards -->
+        <div class="col-span-2 max-md:col-span-1 max-md:mt-5">
+          <div class="col-span-2 max-md:flex flex-col gap-5">
+            <!-- card no : 1 -->
+            <div
+              class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:rotate-25 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+            >
+              <img
+                src="/Images/cardthumbnail.png"
+                class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+              />
+              <div>
+                <h1
+                  class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+                >
+                  TV seris
+                </h1>
+                <p
+                  class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+                >
+                  X-Men 97 exclusive look reveals legacy costumes, the james
+                </p>
+              </div>
+            </div>
+            <!-- Don't typhography -->
+            <h1
+              style="-webkit-text-stroke: 2px #807ee9"
+              class="text-[50px] text-transparent absolute right-0 font-extrabold rotate-90 bg-clip-text text- poppins max-md:hidden"
+            >
+              Don't
+            </h1>
+            <!-- card no : 2 -->
+            <div
+              class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:-rotate-25 md:m-12 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+            >
+              <img
+                src="/Images/cardthumbnail.png"
+                class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+              />
+              <div>
+                <h1
+                  class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+                >
+                  TV seris
+                </h1>
+                <p
+                  class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+                >
+                  X-Men 97 exclusive look reveals legacy costumes, the james
+                </p>
+              </div>
+            </div>
+            <!-- missout typhography -->
+            <h1
+              style="-webkit-text-stroke: 2px #807ee9"
+              class="text-[50px] text-transparent absolute right-80 font-extrabold -rotate-90 bg-clip-text text- poppins max-md:hidden"
+            >
+              Miss out
+            </h1>
+            <!-- card no : 3 -->
+            <div
+              class="bg-white border-[#C3C0C0] border-[0.5px] w-[300px] md:min-h-[300px] rounded-[25px] p-5 flex flex-col items-center shadow-xl md:rotate-25 z-0 max-md:flex-row max-md:w-full max-md:gap-2 max-md:min-h-40 max-md:items-start max-md:shadow-sm max-sm:flex-col"
+            >
+              <img
+                src="/Images/cardthumbnail.png"
+                class="rounded-[15px] w-[300px] h-40 object-fit max-sm:w-80 m-auto block max-sm:h-33"
+              />
+              <div>
+                <h1
+                  class="poppins font-semibold md:text-center text-xl text-[#011826] md:m-2"
+                >
+                  TV seris
+                </h1>
+                <p
+                  class="md:text-center text-[18px] text-[#011826] font-[300] poppins"
+                >
+                  X-Men 97 exclusive look reveals legacy costumes, the james
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- spotlight section component-->
+      <div>
+        <!-- section 1 -->
+        <div
+          class="grid grid-cols-2 gap-2 mt-20 mx-20 max-md:mx-10 max-md:grid-cols-1"
+        >
+          <!-- left side div -->
+          <div>
+            <h1
+              class="text-[75px] max-md:text-5xl font-semibold poppins leading-tight bg-gradient-to-r from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent capitalize"
+            >
+              Film-Maker Spotlight <br />
+              series.
+            </h1>
+            <div class="mt-10 md:w-fit">
+              <img
+                src="/Images/starwars.png"
+                alt="cinema drip movie star wars"
+                width="1000"
+                height="1000"
+                class="w-64 h-96 rounded-2xl max-md:m-auto block"
+              />
+              <button
+                class="shadow-xl text-lg px-10 poppins py-4 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase font-semibold text-white flex items-center gap-2 m-auto mt-5"
+              >
+                <img
+                  src="/Images/play.png"
+                  alt="play icon cinema drip"
+                  width="1000"
+                  height="1000"
+                  class="w-8"
+                />
+                Watch
+              </button>
+            </div>
+          </div>
+          <!-- right side div -->
+          <div class="flex flex-col gap-y-10">
+            <!-- card 1: interview -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/storyIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">Interview</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- card 2 : podcast -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/micIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">Podcast</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- card 3 : news -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/newsIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">news</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <button
+              class="text-[#011826] text-lg capitalize m-auto hover:underline flex items-center gap-2"
+            >
+              see all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- section 2 -->
+        <div class="mt-20 mx-20 max-md:mx-10">
+          <!-- header -->
+          <div class="flex items-center max-md:items-start gap-2">
+            <img
+              src="/Images/Mask group.png"
+              alt="mask group"
+              width="1000"
+              height="1000"
+              class="w-14"
+            />
+            <h1
+              class="text-[55px] max-sm:text-4xl text-[#011826] font-semibold poppins capitalize"
+            >
+              Spotlight Series Shorts
+            </h1>
+          </div>
+          <button
+            class="text-[#011826] text-lg capitalize m-auto mr-0 hover:underline flex items-center gap-2"
+          >
+            see all
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </button>
+          <!-- thumbnails -->
+          <div class="flex justify-center gap-5 mt-5 flex-wrap">
+            <img src="/Images/spotlight1.png" alt="" class="rounded-2xl" />
+            <img src="/Images/spotlight3.png" alt="" class="rounded-2xl" />
+            <img src="/Images/spotlight2.png" alt="" class="rounded-2xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
