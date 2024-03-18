@@ -1,6 +1,6 @@
- <!-- navigation component -->
- <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
-  <div class="flex justify-between items-center py-4 mx-20 max-md:mx-4">
+<!--Loggedin navigation component -->
+<div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+  <div class="flex justify-between items-center py-2 mx-20 max-md:mx-4">
     <!-- nav links -->
     <button class="max-ipad:block hidden">
       <svg
@@ -34,8 +34,8 @@
         class="m-auto block"
       />
     </div>
-    <!-- login/singup buttons -->
-    <div class="flex items-center gap-2">
+    <!-- profile and search icon buttons -->
+    <div class="flex items-center gap-5">
       <!-- search icon -->
       <button>
         <img
@@ -46,22 +46,19 @@
           class="w-12"
         />
       </button>
-      <!-- login button -->
+      <!-- Profile icon button -->
       <div
-        class="rounded-full bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
+        class="border border-[#C3C0C0] px-4 poppins py-4 rounded-full bg-white flex items-center gap-6"
       >
-        <button
-          class="bg-white text-blue-400 px-10 py-3 m-[3px] uppercase rounded-full ppoppins"
-        >
-          log in
+        <img
+          src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt="profile pciture icon"
+          class="w-[40px] rounded-full"
+        />
+        <button>
+          <img src="/Images/menu.svg" alt="cinema drip menu" />
         </button>
       </div>
-      <!-- singup button -->
-      <button
-        class="shadow-lg px-10 poppins py-4 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
-      >
-        sign up
-      </button>
     </div>
   </div>
 </div>
