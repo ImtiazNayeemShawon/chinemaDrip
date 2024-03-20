@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation page</title>
+    <link href="../output.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url(/Images/formsBG.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <!--Loggedin navigation component -->
+      <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+        <div class="flex justify-between items-center py-2 mx-20 max-md:mx-4">
+          <!-- nav links -->
+          <button class="max-ipad:block hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill=""
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
+          <div class="flex gap-5 max-ipad:hidden">
+            <a href="#" class="font-semibold capitalize">Home</a>
+            <a href="#" class="font-semibold capitalize">blogs</a>
+            <a href="#" class="font-semibold capitalize">podcast</a>
+            <a href="#" class="font-semibold capitalize">spotlight series</a>
+          </div>
+          <!-- logo -->
+          <div class="">
+            <img
+              src="/Images/logo.png"
+              alt="cinemadrip logo"
+              width="100"
+              height="100"
+              class="m-auto block"
+            />
+          </div>
+          <!-- profile and search icon buttons -->
+          <div class="flex items-center gap-5">
+            <!-- search icon -->
+            <button>
+              <img
+                src="/Images/searchIcon.png"
+                width="100"
+                height="100"
+                alt="cinema drip search icon"
+                class="w-12"
+              />
+            </button>
+            <!-- Profile icon button -->
+            <div
+              class="border border-[#C3C0C0] px-4 poppins py-4 rounded-full bg-white flex items-center gap-6"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="profile pciture icon"
+                class="w-[40px] rounded-full"
+              />
+              <button id="PofileDropDownBtn">
+                <img src="/Images/menu.svg" alt="cinema drip menu" />
+              </button>
+              <!-- profile dropdown -->
+              <div
+                id="profile"
+                class="absolute hidden top-2 right-10 rounded-[20px] bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+              >
+                <div class="rounded-[18px] bg-white m-[3px] w-56">
+                  <div class="p-4">
+                    <button id="profileClose" class="mr-0 block m-auto">
+                      <img
+                        src="/Images/cross.png"
+                        alt="profile close cross hamburger"
+                        class=""
+                      />
+                    </button>
+                    <img
+                      src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt="profile pciture icon"
+                      class="w-[50px] m-auto rounded-full"
+                    />
+                    <p
+                      class="text-center poppins text-[#011826] capitalize text-[16px] font-normal"
+                    >
+                      Lia Andrew
+                    </p>
+                    <!-- buttons -->
+                    <div class="mt-5">
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Donation History
+                      </button>
+                      <div class="w-full h-[2px] bg-[#D9D9D9] my-3"></div>
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Sign out
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- parent div -->
+      <div
+        class="pt-10 px-20 max-md:px-5 max-md:pt-5 h-screen w-[60%] max-ipad:w-full"
+      >
+        <h2 class="poppins font-bold text-[36px] poppins">
+          Donation History<span class="text-[#6260FA] text-5xl">.</span>
+        </h2>
+        <div class="flex justify-between items-center mt-10">
+          <h1
+            class="text-primarytext text-[20px] capitalize poppins font-[500]"
+          >
+            You are a PREMIUM member.
+          </h1>
+          <button>
+            <span
+              class="bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] font-bold text-xl to-[#6260FA] bg-clip-text text-transparent"
+            >
+              Change Plan
+            </span>
+          </button>
+        </div>
+        <h1
+          class="text-primarytext uppercase text-[20px] poppins font-bold mt-6"
+        >
+          Billing information
+        </h1>
+        <div class="bg-primarytext w-full h-[2px]"></div>
+        <p class="my-2 font-[400] poppins">
+          Billed through: <span class="font-[300]">Stripe</span>
+        </p>
+        <p class="my-2 font-[400] poppins">
+          Current Plan: <span class="font-[300]">Premium</span>
+        </p>
+        <p class="my-2 font-[400] poppins">
+          Price: <span class="font-[300]">$19.99/month</span>
+        </p>
+        <div class="flex justify-between items-center">
+          <p class="my-2 font-[400] poppins flex items-center gap-2">
+            Payment Method:
+            <img src="/Images/card.png" alt="" />
+            <span class="font-[300]">**** **** **** 1458</span>
+          </p>
+          <button>
+            <span
+              class="bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] font-bold text-xl to-[#6260FA] bg-clip-text text-transparent"
+              >Update</span
+            >
+          </button>
+        </div>
+        <p class="my-2 font-[400] poppins">
+          Next Billing Date: <span class="font-[300]">08/25/2023</span>
+        </p>
+      </div>
+    </div>
+    <!-- jquery scripts -->
+    <script>
+      $(document).ready(function () {
+        // Toggle the profile dropDown when the button is clicked
+        $("#PofileDropDownBtn").click(function () {
+          $("#profile").slideToggle();
+        });
+      });
+      // Close the profile dropdonw when close button is clicked
+      $("#profileClose").click(function () {
+        $("#profile").slideUp();
+      });
+    </script>
+  </body>
+</html>
