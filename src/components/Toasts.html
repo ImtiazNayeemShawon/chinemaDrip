@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast</title>
+    <link href="../output.css" rel="stylesheet" />
+  </head>
+  <body class="m-20">
+    <!-- succes toast -->
+    <div
+      class="bg-gradient-to-r from-[#7BFF88] to-[#29B57A] w-fit mt-1 p-[2px] rounded-l-[24px]"
+    >
+      <div
+        class="bg-white w-80 flex flex-col justify-center p-5 h-20 rounded-l-[22px]"
+      >
+        <p
+          class="poppins flex items-center gap-1 font-bold poppins bg-gradient-to-r from-[#42f254] to-[#29B57A] text-transparent bg-clip-text"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{5}"
+            stroke="currentColor"
+            class="w-6 h-6 text-[#29B57A]"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+
+          Email Sent
+        </p>
+      </div>
+    </div>
+
+    <!-- failure toast -->
+    <div
+      class="bg-gradient-to-r from-[#FF2121] to-[#FF5858] w-fit mt-1 p-[2px] rounded-l-[24px]"
+    >
+      <div
+        class="bg-white w-80 flex flex-col justify-center p-5 h-20 rounded-l-[22px]"
+      >
+        <p
+          class="poppins flex items-center gap-1 font-bold poppins bg-gradient-to-r from-[#FF2121] to-[#FF5858] text-transparent bg-clip-text"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            class="w-6 h-6 text-red-600"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+
+          Authentication Failed
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
