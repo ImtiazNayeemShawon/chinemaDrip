@@ -7,7 +7,7 @@ module.exports = {
         25: "25deg",
       },
       colors: {
-        black: "#000000",
+        primarytext: "#011826",
         white: "#FFFFFF",
       },
       screens:{
