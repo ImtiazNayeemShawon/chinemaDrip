@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <title>CinemaDrip/Home Page/Signed Up/(Slider)</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="m-0 p-0">
+      <!--Loggedin navigation component -->
+      <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+        <div class="flex justify-between items-center py-2 mx-20 max-md:mx-4">
+          <!-- nav links -->
+          <button class="max-ipad:block hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill=""
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
+          <div class="flex gap-5 max-ipad:hidden">
+            <a href="#" class="font-semibold capitalize">Home</a>
+            <a href="#" class="font-semibold capitalize">blogs</a>
+            <a href="#" class="font-semibold capitalize">podcast</a>
+            <a href="#" class="font-semibold capitalize">spotlight series</a>
+          </div>
+          <!-- logo -->
+          <div class="">
+            <img
+              src="/Images/logo.png"
+              alt="cinemadrip logo"
+              width="100"
+              height="100"
+              class="m-auto block"
+            />
+          </div>
+          <!-- profile and search icon buttons -->
+          <div class="flex items-center gap-5">
+            <!-- search icon -->
+            <button>
+              <img
+                src="/Images/searchIcon.png"
+                width="100"
+                height="100"
+                alt="cinema drip search icon"
+                class="w-12"
+              />
+            </button>
+            <!-- Profile icon button -->
+            <div
+              class="border border-[#C3C0C0] px-4 poppins py-4 rounded-full bg-white flex items-center gap-6"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="profile pciture icon"
+                class="w-[40px] rounded-full"
+              />
+              <button id="PofileDropDownBtn">
+                <img src="/Images/menu.svg" alt="cinema drip menu" />
+              </button>
+              <!-- profile dropdown -->
+              <div
+                id="profile"
+                class="absolute hidden top-2 right-10 rounded-[20px] bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+              >
+                <div class="rounded-[18px] bg-white m-[3px] w-56">
+                  <div class="p-4">
+                    <button id="profileClose" class="mr-0 block m-auto">
+                      <img
+                        src="/Images/cross.png"
+                        alt="profile close cross hamburger"
+                        class=""
+                      />
+                    </button>
+                    <img
+                      src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt="profile pciture icon"
+                      class="w-[50px] m-auto rounded-full"
+                    />
+                    <p
+                      class="text-center poppins text-[#011826] capitalize text-[16px] font-normal"
+                    >
+                      Lia Andrew
+                    </p>
+                    <!-- buttons -->
+                    <div class="mt-5">
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Donation History
+                      </button>
+                      <div class="w-full h-[2px] bg-[#D9D9D9] my-3"></div>
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Sign out
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero section -->
+      <div class="mx-20 max-ipad:mx-5 mt-10">
+        <div class="relative">
+          <img
+            src="/Images/starwarsbanner.png"
+            class="rounded-sm max-sm:h-[200px] object-cover w-full"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-[#39353574] w-full rounded-sm flex flex-col justify-end p-20 max-sm:p-3"
+          >
+            <div class="gap-4">
+              <h1
+                class="text-white text-[55px] font-extrabold poppins max-ipad:text-3xl max-sm:text-xl"
+              >
+                Star Wars
+              </h1>
+              <p
+                class="text-[34px] text-[#E9EFF4] w-[60%] max-ipad:text-[15px] max-sm:text-[10px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+                dui vitae sem egestas. Gravida tristique aliquam ut urna. Dolor
+              </p>
+              <button
+                class="shadow-xl max-sm:text-sm max-sm:px-4 max-sm:py-1 text-lg px-14 max-ipad:px-10 max-ipad:py-2 poppins py-3 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase font-semibold text-white flex items-center gap-2 mt-5"
+              >
+                <img
+                  src="/Images/play.png"
+                  alt="play icon cinema drip"
+                  width="1000"
+                  height="1000"
+                  class="w-8 max-sm:w-4"
+                />
+                Play
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- grab news -->
+      <div
+        class="grid grid-cols-2 place-content-between gap-10 mx-20 mt-10 max-ipad:mx-5 max-ipad:grid-cols-1 max-ipad:flex max-ipad:flex-col-reverse"
+      >
+        <!-- contents -->
+        <div>
+          <h1
+            class="text-[56px] w-[80%] poppins font-extrabold bg-gradient-to-tr from-[#00ECD4] to-[#6260FA] text-transparent bg-clip-text"
+          >
+            Let’s Grab Some Interviews
+          </h1>
+          <div class="flex flex-col gap-y-10">
+            <!-- card 1: interview -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/storyIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">Interview</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- card 2 : podcast -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/micIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">Podcast</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- card 3 : news -->
+            <div class="flex items-center max-md:flex-wrap">
+              <!-- text and icon -->
+              <div class="w-fit">
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/Images/newsIcon.png"
+                    alt="interview cinema drip"
+                    width="1000"
+                    height="1000"
+                    class="w-6"
+                  />
+                  <p class="text-[#011826] poppins capitalize">news</p>
+                </div>
+                <h1
+                  class="text-[#011826] poppins text-[35px] leading-tight my-3"
+                >
+                  James Wan with the reporter about Star wars.
+                </h1>
+                <p class="text-[#011826] text-[16px] font-[300]">
+                  By Stuart Berman
+                </p>
+              </div>
+              <!-- thumbnail -->
+              <div class="relative">
+                <img
+                  src="/Images/podcastThumbnail.png"
+                  alt="cinema drip podcast thumbnails"
+                  class="rounded-2xl w-[450px] min-h-[140px] my-2"
+                />
+                <button
+                  class="absolute inset-0 flex justify-center items-center bg-transparent"
+                >
+                  <span
+                    class="text-[#011826] bg-white px-8 py-3 rounded-full font-medium poppins text-[14px] uppercase flex items-center"
+                  >
+                    <img
+                      src="/Images/lock.png"
+                      width="1000"
+                      height="1000"
+                      class="w-4"
+                    />
+                    Subscribe</span
+                  >
+                </button>
+              </div>
+            </div>
+            <button
+              class="text-[#011826] text-lg capitalize m-auto hover:underline flex items-center gap-2"
+            >
+              see all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- author -->
+        <div>
+          <div
+            class="bg-white border p-5 rounded-xl w-[40%] max-ipad:w-full m-auto mr-0"
+          >
+            <img
+              src="/Images/author.png"
+              alt="author"
+              class="rounded-full w-24 h-24 object-cover m-auto block"
+            />
+            <h1 class="text-center text-primarytext poppins">Director</h1>
+            <h3
+              class="text-center text-primarytext poppins uppercase font-semibold text-[25px]"
+            >
+              DAVID EHRLICH
+            </h3>
+            <span class="text-center m-auto block text-sm"
+              >I love to share contents that grabs everyone’s attention.</span
+            >
+            <!-- social icons -->
+            <div class="flex gap-2 justify-center mt-5">
+              <!-- facebook -->
+              <div
+                class="rounded-full flex flex-col items-center justify-center w-12 h-12 bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+              >
+                <div class="bg-white p-[10px] rounded-full">
+                  <a href="#">
+                    <span class="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 320 512"
+                        class="w-6 h-6"
+                      >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                        <path
+                          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div
+                class="rounded-full flex flex-col items-center justify-center w-12 h-12 bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+              >
+                <div class="bg-white p-[10px] rounded-full">
+                  <a
+                    href="#"
+                    class="hover:border-b-2 duration-300 py-1 border-black"
+                  >
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- comment box -->
+      <div class="mx-40 max-md:mx-5 mt-10">
+        <div
+          class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px]"
+        >
+          <!-- gradient line -->
+        </div>
+        <h1
+          class="text-center proza-font text-[20px] text-[#011826] font-bold my-5"
+        >
+          Subscribe to <span
+            class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] bg-clip-text text-transparent"
+            >Cinema Drip Newsletter</span
+          >
+           and keep your inbox happy.
+        </h1>
+        <!-- comment form -->
+        <div
+          class="bg-gradient-to-br from-[#6360fa54] to-[#00ecd47c] py-5 px-10"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/Images/comment.png" alt="comment icon" />
+            <h1
+              class="font-extrabold proza-font capitalize text-[24px] text-primarytext"
+            >
+              10 Comments
+            </h1>
+          </div>
+          <p class="text-[16px] text-primarytext my-6 font-medium proza-font">
+            Comments On Deadline Hollywood are monitored. So don't go off topic,
+            don't impersonate anyone, and don't get your facts wrong.
+          </p>
+
+          <!-- inputs -->
+
+          <p class="text-[16px] text-primarytext my-2 font-medium proza-font">
+            Comment
+          </p>
+          <textarea
+            class="border border-primarytext bg-[#AAD4DB] p-5 w-full h-40 .placeholder-gray-900"
+            placeholder="Write your comment within 100 words."
+          ></textarea>
+          <p
+            class="text-[16px] capitalize outline-0 text-primarytext my-2 font-medium proza-font"
+          >
+            name
+          </p>
+          <input
+            class="border border-primarytext bg-[#AAD4DB] p-3 w-full .placeholder-gray-900"
+          />
+          <p
+            class="text-[16px] capitalize outline-0 text-primarytext my-2 font-medium proza-font"
+          >
+            Email
+          </p>
+          <input
+            class="border border-primarytext bg-[#AAD4DB] p-3 w-full .placeholder-gray-900"
+          />
+          <button
+            class="w-full mt-5 py-3 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] proza-font text-white font-bold rounded-full text-xl"
+          >
+            Post a comment
+          </button>
+
+          <!-- comments list -->
+          <div>
+            <!-- comment 1 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <!-- comment 2 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <!-- comment 3 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <button
+              class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[20px] m-auto flex mt-10"
+            >
+              See all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- story  -->
+      <div class="my-20 mx-20 max-md:mx-10">
+        <!-- header -->
+        <div class="flex items-center max-md:items-start gap-2">
+          <img
+            src="/Images/Mask group.png"
+            alt="mask group"
+            width="1000"
+            height="1000"
+            class="w-14"
+          />
+          <h1
+            class="text-[55px] max-sm:text-4xl text-[#011826] font-semibold poppins capitalize"
+          >
+            Spotlight Series Shorts
+          </h1>
+        </div>
+        <button
+          class="text-[#011826] text-lg capitalize m-auto mr-0 hover:underline flex items-center gap-2"
+        >
+          see all
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </button>
+        <!-- thumbnails -->
+        <div class="flex justify-center gap-5 mt-5 flex-wrap">
+          <img src="/Images/spotlight1.png" alt="" class="rounded-2xl" />
+          <img src="/Images/spotlight3.png" alt="" class="rounded-2xl" />
+          <img src="/Images/spotlight2.png" alt="" class="rounded-2xl" />
+        </div>
+      </div>
+
+      <!-- footer component -->
+      <div
+        style="
+          background-image: url(/Images/footerBG.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+        class="border-t-2 w-full"
+      >
+        <div
+          class="mx-20 max-md:mx-4 grid grid-cols-2 max-ipad:grid-cols-1 gap-10 items- p-6 max-ipad:divide-x-0 divide-x-2 divide-dashed divide-[#6260FA]"
+        >
+          <!-- footer text & social icons -->
+          <div
+            class="flex gap-10 items-center justify-center max-ipad:flex-wrap"
+          >
+            <div>
+              <img
+                src="/Images/logo.png"
+                alt="footer bg"
+                width="1000"
+                height="1000"
+                class="w-96 max-ipad:w-20 m-auto block"
+              />
+              <ul class="mt-5 flex gap-5 items-center">
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- facebook -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 320 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                      />
+                    </svg> </span
+                ></a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Instagram -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Linkedin -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- X -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Youtube -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[#011826] poppins text-[18px] max-ipad:text-sm leading-loose font-[300]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                auctor eget bibendum massa a, dapibus nibh rutrum. Lectus vitae
+                montes, sit amet, sed nullam amet velit. Maecenas fermentum
+                integer vulputate eget nullam. Ultrices neque eros aliquet
+              </p>
+            </div>
+          </div>
+          <!-- contact form -->
+          <div
+            class="px-10 flex flex-col max-sm:items-center gap-8 justify-between"
+          >
+            <h1 class="text-[26px] font-[300] poppins max-ipad:text-center">
+              <a href="#" class="text-[#6260FA]">Sign Up</a>
+              to get Awesome Features
+            </h1>
+            <div class="flex items-center">
+              <input
+                placeholder="Enter Your Email"
+                class="w-[60%] max-md:w-full border-[1px] px-4 py-[9px] rounded-l-[8px] border-[#011826] border-r-0"
+              />
+              <button
+                class="bg-gradient-to-r from-[#00ECD4] to-[#6260FA] rounded-r-[8px] text-white p-[10px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <h3
+              class="text-[#011826] text-[24px] max-ipad:text-lg font-[300] poppins"
+            >
+              From Cinema Drip
+            </h3>
+            <div
+              class="flex gap-5 flex-wrap items-center max-sm:justify-center"
+            >
+              <a href="#" class="font-[300] poppins capitalize">Home</a>
+              <a href="#" class="font-[300] poppins capitalize">blogs</a>
+              <a href="#" class="font-[300] poppins capitalize">podcast</a>
+              <a href="#" class="font-[300] poppins capitalize"
+                >spotlight series</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#011826] py-2">
+          <p class="text-center text-white">
+            © 2021 Sonderblu. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Toggle the profile dropDown when the button is clicked
+        $("#PofileDropDownBtn").click(function () {
+          $("#profile").slideToggle();
+        });
+      });
+      // Close the profile dropdonw when close button is clicked
+      $("#profileClose").click(function () {
+        $("#profile").slideUp();
+      });
+    </script>
+  </body>
+</html>
