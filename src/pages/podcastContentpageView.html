@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <title>CinemaDrip/Home Page/Signed Up/(Slider)</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url(../../Images/BG.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+      "
+      class="m-0 p-0"
+    >
+      <!--Loggedin navigation component -->
+      <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+        <div class="flex justify-between items-center py-2 mx-20 max-md:mx-4">
+          <!-- nav links -->
+          <button class="max-ipad:block hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill=""
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
+          <div class="flex gap-5 max-ipad:hidden">
+            <a href="#" class="font-semibold capitalize">Home</a>
+            <a href="#" class="font-semibold capitalize">blogs</a>
+            <a href="#" class="font-semibold capitalize">podcast</a>
+            <a href="#" class="font-semibold capitalize">spotlight series</a>
+          </div>
+          <!-- logo -->
+          <div class="">
+            <img
+              src="/Images/logo.png"
+              alt="cinemadrip logo"
+              width="100"
+              height="100"
+              class="m-auto block"
+            />
+          </div>
+          <!-- profile and search icon buttons -->
+          <div class="flex items-center gap-5">
+            <!-- search icon -->
+            <button>
+              <img
+                src="/Images/searchIcon.png"
+                width="100"
+                height="100"
+                alt="cinema drip search icon"
+                class="w-12"
+              />
+            </button>
+            <!-- Profile icon button -->
+            <div
+              class="border border-[#C3C0C0] px-4 poppins py-4 rounded-full bg-white flex items-center gap-6"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="profile pciture icon"
+                class="w-[40px] rounded-full"
+              />
+              <button id="PofileDropDownBtn">
+                <img src="/Images/menu.svg" alt="cinema drip menu" />
+              </button>
+              <!-- profile dropdown -->
+              <div
+                id="profile"
+                class="absolute hidden top-2 right-10 rounded-[20px] bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+              >
+                <div class="rounded-[18px] bg-white m-[3px] w-56">
+                  <div class="p-4">
+                    <button id="profileClose" class="mr-0 block m-auto">
+                      <img
+                        src="/Images/cross.png"
+                        alt="profile close cross hamburger"
+                        class=""
+                      />
+                    </button>
+                    <img
+                      src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt="profile pciture icon"
+                      class="w-[50px] m-auto rounded-full"
+                    />
+                    <p
+                      class="text-center poppins text-[#011826] capitalize text-[16px] font-normal"
+                    >
+                      Lia Andrew
+                    </p>
+                    <!-- buttons -->
+                    <div class="mt-5">
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Donation History
+                      </button>
+                      <div class="w-full h-[2px] bg-[#D9D9D9] my-3"></div>
+                      <button
+                        class="text-[#011826] poppins font-[300] text-[16px]"
+                      >
+                        Sign out
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- podcast content hero section  -->
+      <div class="mx-20 max-md:mx-5 mt-10 flex flex-col gap-y-5 items-center">
+        <div class="relative">
+          <img
+            src="/Images/podcastContent.png"
+            alt="blogContentThumb"
+            class="w-full block m-auto max-h-[600px] rounded-sm"
+          />
+          <!-- play button -->
+          <div
+            class="absolute inset-0 z-20 flex flex-col justify-end gap-2 bottom-[10%] items-center"
+          >
+            <h1
+              class="text-white font-semibold poppins text-[20px] text-center"
+            >
+              Now Playing: Episode 1
+            </h1>
+            <div class="flex items-center gap-4">
+              <button
+                class="bg-[#ffffff36] rounded-full radial-progress text-[#7BFF88]"
+                style="--value: 60"
+                role="progressbar"
+              >
+                <img src="/Images/playcircle.png" class="max-ipad:w-16" />
+              </button>
+              <img src="/Images/wave.png" class="w-26" />
+            </div>
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-[#39353574] rounded-sm"
+          ></div>
+        </div>
+
+        <!-- category -->
+
+        <div>
+          <h1
+            class="bg-gradient-to-r from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent poppins capitalize text-center leading-tight text-[32px] font-semibold"
+          >
+            TV
+          </h1>
+          <div
+            class="bg-gradient-to-r from-[#00ECD4] to-[#6260FA] h-1 w-10 m-auto"
+          ></div>
+        </div>
+        <!-- title -->
+        <h1
+          class="proza-font text-[#011826] font-bold text-center text-[48px] max-ipad:text-[24px] w-[70%] max-ipad:w-full m-auto block leading-tight"
+        >
+          Vince Staples Turns Rap Stardom Anxieties Into Comedy on The Vince
+          Staples Show
+        </h1>
+        <p
+          class="text-[#011826] poppins text-[16px] font-[400] text-center max-ipad:w-full w-[70%] m-auto block"
+        >
+          Unusually for a big-budget Hollywood movie, the director wrote his
+          screenplay on spec and shot just about everything he wrote.
+        </p>
+        <div
+          class="grid grid-cols-2 divide-x-2 divide-[#011826] items-center gap-4"
+        >
+          <div class="flex items-center gap-2">
+            <h3 class="proza-font text-[24px] max-ipad:text-xl font-extrabold">
+              By
+            </h3>
+            <h1
+              class="bg-gradient-to-r leading-6 proza-font from-[#6260FA] to-[#00ECD4] bg-clip-text text-transparent proza-font max-ipad:text-xl text-[24px] font-extrabold"
+            >
+              Andrew Luis
+              <div
+                class="w-full h-[3px] bg-gradient-to-r proza-font from-[#6260FA] to-[#00ECD4]"
+              ></div>
+            </h1>
+          </div>
+          <p class="text-[#011826] text-[16px] poppins font-[300] pl-4">
+            February 16, 2024
+          </p>
+        </div>
+        <!-- social icons -->
+        <div class="flex gap-2 justify-center">
+          <!-- facebook -->
+          <div
+            class="rounded-full flex flex-col items-center justify-center w-12 h-12 bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+          >
+            <div class="bg-white p-[10px] rounded-full">
+              <a href="#">
+                <span class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 320 512"
+                    class="w-6 h-6"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div
+            class="rounded-full flex flex-col items-center justify-center w-12 h-12 bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA]"
+          >
+            <div class="bg-white p-[10px] rounded-full">
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                    class="w-6 h-6"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- podcast content section -->
+      <div
+        style="
+          background-image: url(/Images/BG.png);
+          background-size: cover;
+          height: 100%;
+          background-repeat: no-repeat;
+        "
+        class="px-40 max-ipad:px-5 mt-10 grid grid-cols-8 place-items-start max-ipad:grid-cols-1 gap-10"
+      >
+        <!-- content -->
+        <div class="col-span-6 w-full max-ipad:col-span-1">
+          <!-- text conetent -->
+          <article
+            class="my-5 text-[#011826] poppins text-[16px] leading-[30px] font-[300]"
+          >
+            In the premiere episode of The Vince Staples Show, a satirical
+            Netflix series that stars Vince Staples as a semi-fictionalized
+            version of himself, life as a recognizable but not ultra-famous or
+            filthy rich rapper is nothing but a hassle.
+          </article>
+          <!-- episodes -->
+          <div class="my-10">
+            <h1 class="text-primarytext font-bold text-[24px] poppins">
+              Episodes:
+            </h1>
+
+            <div
+              class="border my-4 overflow-scroll flex items-center gap-5 rounded-[20px] p-4 border-primarytext bg-white shadow-xl shadow-[#ccccff74]"
+            >
+              <!-- Podcast : 1 -->
+              <div
+                class="bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] p-[1px] rounded-[22px] w-fit"
+              >
+                <div class="bg-white p-4 w-80 rounded-[20px]">
+                  <h1
+                    class="text-primarytext text-[16px] poppins font-semibold"
+                  >
+                    Episode 01: Introduction
+                  </h1>
+                  <!-- play button -->
+                  <div class="flex items-center gap-2 mt-2">
+                    <button
+                      class="bg-[#6360fa66] rounded-full radial-progress text-[#7BFF88]"
+                      style="--value: 10; --size: 3rem"
+                      role="progressbar"
+                    >
+                      <img src="/Images/playcircle.png" class="" />
+                    </button>
+                    <img src="/Images/wave.png" class="w-26" />
+                  </div>
+                </div>
+              </div>
+              <!-- Podcast : 2 -->
+              <div
+                class="bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] p-[1px] rounded-[22px] w-fit"
+              >
+                <div class="bg-white p-4 w-80 rounded-[20px]">
+                  <h1
+                    class="text-primarytext text-[16px] poppins font-semibold"
+                  >
+                    Episode 01: Introduction
+                  </h1>
+                  <!-- play button -->
+                  <div class="flex items-center gap-2 mt-2">
+                    <button
+                      class="bg-[#6360fa66] rounded-full radial-progress text-[#7BFF88]"
+                      style="--value: 10; --size: 3rem"
+                      role="progressbar"
+                    >
+                      <img src="/Images/playcircle.png" class="" />
+                    </button>
+                    <img src="/Images/wave.png" class="w-26" />
+                  </div>
+                </div>
+              </div>
+              <!-- Podcast : 3 -->
+              <div
+                class="bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] p-[1px] rounded-[22px] w-fit"
+              >
+                <div class="bg-white p-4 w-80 rounded-[20px]">
+                  <h1
+                    class="text-primarytext text-[16px] poppins font-semibold"
+                  >
+                    Episode 01: Introduction
+                  </h1>
+                  <!-- play button -->
+                  <div class="flex items-center gap-2 mt-2">
+                    <button
+                      class="bg-[#6360fa66] rounded-full radial-progress text-[#7BFF88]"
+                      style="--value: 10; --size: 3rem"
+                      role="progressbar"
+                    >
+                      <img src="/Images/playcircle.png" class="" />
+                    </button>
+                    <img src="/Images/wave.png" class="w-26" />
+                  </div>
+                </div>
+              </div>
+              <!-- Podcast : 3 -->
+              <div
+                class="bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] p-[1px] rounded-[22px] w-fit"
+              >
+                <div class="bg-white p-4 w-80 rounded-[20px]">
+                  <h1
+                    class="text-primarytext text-[16px] poppins font-semibold"
+                  >
+                    Episode 01: Introduction
+                  </h1>
+                  <!-- play button -->
+                  <div class="flex items-center gap-2 mt-2">
+                    <button
+                      class="bg-[#6360fa66] rounded-full radial-progress text-[#7BFF88]"
+                      style="--value: 10; --size: 3rem"
+                      role="progressbar"
+                    >
+                      <img src="/Images/playcircle.png" class="" />
+                    </button>
+                    <img src="/Images/wave.png" class="w-26" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- text conetent -->
+          <article
+            class="my-5 text-[#011826] poppins text-[16px] leading-[30px] font-[300]"
+          >
+            If you google Vince Staples’ funniest moments, almost none of them
+            will be from his albums. Instead, you’ll find tweets that feel like
+            unfiltered, off-the-dome thoughts and clips from interviews and
+            podcast appearances in which he’s prone to make others uneasy with
+            his quick-witted, dry sense of humor.
+          </article>
+        </div>
+
+        <!-- Donation form -->
+        <div
+          class="col-span-2 max-ipad:col-span-1 md:mr-0 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-[280px] max-ipad:w-full"
+        >
+          <div class="bg-white m-1.5 p-4">
+            <h2
+              class="text-[20px] font-bold proza-font text-center leading-tight"
+            >
+              If You Are Loving It, Please Support Us To Create More Contents
+              Like This.
+            </h2>
+            <div class="flex flex-col gap-4 py-6">
+              <input
+                placeholder="Name"
+                class="border border-[#011826] rounded-full px-4 py-3 bg-[#d7d9e4] outline-0 text-[#011826]"
+              />
+
+              <input
+                placeholder="E-mail"
+                class="border border-[#011826] rounded-full px-4 py-3 bg-[#d7d9e4] outline-0 text-[#011826]"
+              />
+              <button
+                class="px-4 py-3 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] proza-font text-white font-bold rounded-full text-xl"
+              >
+                Support $10
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guests section -->
+      <div
+        style="
+          background-image: url(/Images/guestBG.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+        "
+        class="py-20"
+      >
+        <h1
+          class="text-center font-semibold text-primarytext poppins text-[45px]"
+        >
+          Meet the Guest
+        </h1>
+        <div class="grid grid-cols-4 mx-20 max-ipad:mx-5 gap-10 mt-10 max-ipad:grid-cols-2 max-sm:grid-cols-1">
+          <!-- GUEST : 1 -->
+          <div class="bg-white p-8 rounded-xl w-fit">
+            <img
+              src="/Images/author.png"
+              alt=""
+              class="rounded-full object-cover w-48 h-48 m-auto block"
+            />
+            <p
+              class="text-center text-primarytext poppins text-[20px] font-medium mt-2"
+            >
+              Amber Brook
+            </p>
+            <p
+              class="text-center uppercase font-medium poppins bg-gradient-to-t from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent"
+            >
+              Director
+            </p>
+            <article
+              class="text-center text-primarytext text-[16px] mt-2 poppins"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              auctor eget
+            </article>
+            <!-- socials -->
+            <div class="flex justify-center gap-2 mt-4">
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- facebook -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 320 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    />
+                  </svg> </span
+              ></a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- Instagram -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- X -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- GUEST : 2 -->
+          <div class="bg-white p-8 rounded-xl w-fit">
+            <img
+              src="/Images/author.png"
+              alt=""
+              class="rounded-full object-cover w-48 h-48 m-auto block"
+            />
+            <p
+              class="text-center text-primarytext poppins text-[20px] font-medium mt-2"
+            >
+              Amber Brook
+            </p>
+            <p
+              class="text-center uppercase font-medium poppins bg-gradient-to-t from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent"
+            >
+              Director
+            </p>
+            <article
+              class="text-center text-primarytext text-[16px] mt-2 poppins"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              auctor eget
+            </article>
+            <!-- socials -->
+            <div class="flex justify-center gap-2 mt-4">
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- facebook -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 320 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    />
+                  </svg> </span
+              ></a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- Instagram -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- X -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- GUEST : 3 -->
+          <div class="bg-white p-8 rounded-xl w-fit">
+            <img
+              src="/Images/author.png"
+              alt=""
+              class="rounded-full object-cover w-48 h-48 m-auto block"
+            />
+            <p
+              class="text-center text-primarytext poppins text-[20px] font-medium mt-2"
+            >
+              Amber Brook
+            </p>
+            <p
+              class="text-center uppercase font-medium poppins bg-gradient-to-t from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent"
+            >
+              Director
+            </p>
+            <article
+              class="text-center text-primarytext text-[16px] mt-2 poppins"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              auctor eget
+            </article>
+            <!-- socials -->
+            <div class="flex justify-center gap-2 mt-4">
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- facebook -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 320 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    />
+                  </svg> </span
+              ></a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- Instagram -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- X -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- GUEST : 4 -->
+          <div class="bg-white p-8 rounded-xl w-fit">
+            <img
+              src="/Images/author.png"
+              alt=""
+              class="rounded-full object-cover w-48 h-48 m-auto block"
+            />
+            <p
+              class="text-center text-primarytext poppins text-[20px] font-medium mt-2"
+            >
+              Amber Brook
+            </p>
+            <p
+              class="text-center uppercase font-medium poppins bg-gradient-to-t from-[#00ECD4] to-[#6260FA] bg-clip-text text-transparent"
+            >
+              Director
+            </p>
+            <article
+              class="text-center text-primarytext text-[16px] mt-2 poppins"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              auctor eget
+            </article>
+            <!-- socials -->
+            <div class="flex justify-center gap-2 mt-4">
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- facebook -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 320 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    />
+                  </svg> </span
+              ></a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- Instagram -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="#"
+                class="hover:border-b-2 duration-300 py-1 border-black"
+              >
+                <!-- X -->
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- host section -->
+      <div class="mx-40 max-md:mx-5">
+        <h1
+          class="text-center font-semibold text-primarytext poppins text-[45px]"
+        >
+          Let’s Know The Host
+        </h1>
+        <!-- text conetent -->
+        <article
+          class="my-5 text-[#011826] poppins text-[14px] leading-[30px] font-[300]"
+        >
+          Iliana Sosa: “Growing up on the border in El Paso, it’s a complicated
+          space and region, and it’s heavily Latino. As soon as you walk into
+          the airport or land in El Paso, you hear Spanish everywhere. I didn’t
+          think it was necessarily unique to me growing up there until I left.
+        </article>
+        <!-- grid view with profile photo -->
+        <div class="grid grid-cols-8 max-ipad:grid-cols-1 gap-10">
+          <div class="col-span-2 max-ipad:col-span-1 w-full">
+            <img
+              src="/Images/author.png"
+              alt="author picture"
+              class="w-60 h-80 rounded-sm m-auto block"
+            />
+            <article
+              class="text-[#011826] poppins text-[14px] leading-[26px] font-[400]"
+            >
+              Illiana Sosa at the Cinema Drip Studio during the 2024 Sundance
+              Film Festival on January 22, 2024 in Park City, Utah.
+            </article>
+            <div
+              class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+            >
+              <!-- gradient line -->
+            </div>
+          </div>
+          <div class="col-span-6 max-ipad:col-span-1 w-full">
+            <article
+              class="text-[#011826] poppins text-[14px] leading-[30px] font-[300]"
+            >
+              Sosa continues: “And making this film in today’s climate with a
+              governor who literally is banning books — the government of Texas
+              bans books all the time — this film became one of the most
+              important things that I’ve done in my career because it was a way
+              of putting the Black story of Texas, just from my perspective, my
+              little tiny part in that, my family’s tiny part in that, on film.
+              So, it’s about oil and energy, but then it kind of has this other
+              parallel lane… What I realized in making it is that the real story
+              of oil and gas and energy — Houston is the energy capital of the
+              United States of America and even the world — is that Black
+              communities, Black and brown communities in the city, we’re not
+              really a part of the wealth, but we get the environmental impacts
+              from our homes and our communities. And so that was something that
+              was a big part of the discovery and my process of making the
+              film.” And then I went to Central Texas and studied in university
+              near Austin. El Paso and the border in general is a very unique
+              place and very different from a lot of parts of Texas. I’m first
+              generation, and I grew up crossing all the time between Juárez and
+              El Paso. And in this episode, we explore what it’s like to live in
+              this in-between, which I think a lot of people of color relate to.
+              We explore this term, it’s a Nawatil word meaning ‘in-between.’
+              What is it like to live in the in-between?”general is a very
+              unique place and very different from a lot of parts of Texas. I’m
+              first generation, and I grew up crossing all the time between
+              Juárez general is a very unique place and very different from a
+              lot of parts of Texas. I’m first generation, and I grew up
+              crossing
+            </article>
+          </div>
+        </div>
+      </div>
+      <!-- comment box -->
+      <div class="mx-60 max-md:mx-5 py-10">
+        <h1
+          class="text-center proza-font text-[20px] text-[#011826] font-bold my-5"
+        >
+          Subscribe to <span
+            class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] bg-clip-text text-transparent"
+            >Cinema Drip Newsletter</span
+          >
+           and keep your inbox happy.
+        </h1>
+        <!-- comment form -->
+        <div
+          class="bg-gradient-to-br from-[#6360fa54] to-[#00ecd47c] py-5 px-10"
+        >
+          <div class="flex items-center gap-2">
+            <img src="/Images/comment.png" alt="comment icon" />
+            <h1
+              class="font-extrabold proza-font capitalize text-[24px] text-primarytext"
+            >
+              10 Comments
+            </h1>
+          </div>
+          <p class="text-[16px] text-primarytext my-6 font-medium proza-font">
+            Comments On Deadline Hollywood are monitored. So don't go off topic,
+            don't impersonate anyone, and don't get your facts wrong.
+          </p>
+
+          <!-- inputs -->
+
+          <p class="text-[16px] text-primarytext my-2 font-medium proza-font">
+            Comment
+          </p>
+          <textarea
+            class="border border-primarytext bg-[#AAD4DB] p-5 w-full h-40 .placeholder-gray-900"
+            placeholder="Write your comment within 100 words."
+          ></textarea>
+          <p
+            class="text-[16px] capitalize outline-0 text-primarytext my-2 font-medium proza-font"
+          >
+            name
+          </p>
+          <input
+            class="border border-primarytext bg-[#AAD4DB] p-3 w-full .placeholder-gray-900"
+          />
+          <p
+            class="text-[16px] capitalize outline-0 text-primarytext my-2 font-medium proza-font"
+          >
+            Email
+          </p>
+          <input
+            class="border border-primarytext bg-[#AAD4DB] p-3 w-full .placeholder-gray-900"
+          />
+          <button
+            class="w-full mt-5 py-3 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] proza-font text-white font-bold rounded-full text-xl"
+          >
+            Post a comment
+          </button>
+
+          <!-- comments list -->
+          <div>
+            <!-- comment 1 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <!-- comment 2 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <!-- comment 3 -->
+            <div>
+              <div
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] w-full h-[3px] my-4"
+              >
+                <!-- gradient line -->
+              </div>
+
+              <div class="flex gap-2 items-end">
+                <h1 class="font-bold proza-font text-primarytext text-[20px]">
+                  Anonymous
+                </h1>
+                <p class="text-[#01182694] text-[14px] italic">
+                  On February 06,2024
+                </p>
+              </div>
+              <article
+                class="my-6 text-[20px] text-primarytext poppins font-medium"
+              >
+                Those posts aren’t wrong. It is objectively one of the worst
+                endings in TV history.
+              </article>
+              <button
+                class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[16px]"
+              >
+                Reply
+              </button>
+            </div>
+            <button
+              class="bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text font-bold proza-font text-[20px] m-auto flex mt-10"
+            >
+              See all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 bg-gradient-to-r from-[#6260FA] to-[#00ECD4] text-transparent bg-clip-text"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer component -->
+      <div
+        style="
+          background-image: url(/Images/footerBG.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+        class="border-t-2 w-full"
+      >
+        <div
+          class="mx-20 max-md:mx-4 grid grid-cols-2 max-ipad:grid-cols-1 gap-10 items- p-6 max-ipad:divide-x-0 divide-x-2 divide-dashed divide-[#6260FA]"
+        >
+          <!-- footer text & social icons -->
+          <div
+            class="flex gap-10 items-center justify-center max-ipad:flex-wrap"
+          >
+            <div>
+              <img
+                src="/Images/logo.png"
+                alt="footer bg"
+                width="1000"
+                height="1000"
+                class="w-96 max-ipad:w-20 m-auto block"
+              />
+              <ul class="mt-5 flex gap-5 items-center">
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- facebook -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 320 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                      />
+                    </svg> </span
+                ></a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Instagram -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Linkedin -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- X -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="hover:border-b-2 duration-300 py-1 border-black"
+                >
+                  <!-- Youtube -->
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[#011826] poppins text-[18px] max-ipad:text-sm leading-loose font-[300]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                auctor eget bibendum massa a, dapibus nibh rutrum. Lectus vitae
+                montes, sit amet, sed nullam amet velit. Maecenas fermentum
+                integer vulputate eget nullam. Ultrices neque eros aliquet
+              </p>
+            </div>
+          </div>
+          <!-- contact form -->
+          <div
+            class="px-10 flex flex-col max-sm:items-center gap-8 justify-between"
+          >
+            <h1 class="text-[26px] font-[300] poppins max-ipad:text-center">
+              <a href="#" class="text-[#6260FA]">Sign Up</a>
+              to get Awesome Features
+            </h1>
+            <div class="flex items-center">
+              <input
+                placeholder="Enter Your Email"
+                class="w-[60%] max-md:w-full border-[1px] px-4 py-[9px] rounded-l-[8px] border-[#011826] border-r-0"
+              />
+              <button
+                class="bg-gradient-to-r from-[#00ECD4] to-[#6260FA] rounded-r-[8px] text-white p-[10px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <h3
+              class="text-[#011826] text-[24px] max-ipad:text-lg font-[300] poppins"
+            >
+              From Cinema Drip
+            </h3>
+            <div
+              class="flex gap-5 flex-wrap items-center max-sm:justify-center"
+            >
+              <a href="#" class="font-[300] poppins capitalize">Home</a>
+              <a href="#" class="font-[300] poppins capitalize">blogs</a>
+              <a href="#" class="font-[300] poppins capitalize">podcast</a>
+              <a href="#" class="font-[300] poppins capitalize"
+                >spotlight series</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#011826] py-2">
+          <p class="text-center text-white">
+            © 2021 Sonderblu. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Toggle the profile dropDown when the button is clicked
+        $("#PofileDropDownBtn").click(function () {
+          $("#profile").slideToggle();
+        });
+      });
+      // Close the profile dropdonw when close button is clicked
+      $("#profileClose").click(function () {
+        $("#profile").slideUp();
+      });
+    </script>
+  </body>
+</html>

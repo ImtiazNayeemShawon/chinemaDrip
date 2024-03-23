@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <title>CinemaDrip/Home Page/Signed Up/(Slider)</title>
+  </head>
+  <body class="m-10 flex flex-col justify-center items- h-screen">
+    <!-- Podcast : 1 -->
+    <audio controls id="song" class="">
+      <source src="/Images/audio.mp4" type="audio/mp4" />
+    </audio>
+    <div class="bg-white p-4 w-64 max-sm:w-full rounded-[20px]">
+      <h1 class="text-primarytext text-[16px] poppins font-semibold">
+        Episode 01: Introduction
+      </h1>
+
+      <!-- play button -->
+      <div class="flex items-center gap-2 mt-2">
+        <div
+          id="progress"
+          class="bg-[#6360fa66] z-0 radial-progress rounded-full text-[#7BFF88]"
+          style="--value:0"
+        >
+          <button
+            onclick="playPause()"
+            id="ctrlIcon"
+            type="button"
+            class="z-10 bg-gradient-to-r cursor-pointer from-[#00ecd473] p-6 via-[#55a9ddb3] to-[#6360fade] rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-5 h-5 text-white"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let p = 10;
+      var progress = document.getElementById("progress");
+      let song = document.getElementById("song");
+      let ctrlIcon = document.getElementById("ctrlIcon");
+
+      song.onloadedmetadata = function () {
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+      };
+
+      function playPause() {
+        if (song.paused) {
+          song.play();
+          progress.style["--value"] = "80";
+          ctrlIcon.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"> <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clipRule="evenodd" /></svg>';
+        } else {
+          song.pause();
+          ctrlIcon.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"><path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd"/></svg>';
+        }
+      }
+      if (song.play) {
+        setInterval(() => {
+          let progress = (song.currentTime / song.duration) * 100;
+          progress.style.setProperty("--value", progress * 40);
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
