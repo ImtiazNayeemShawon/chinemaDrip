@@ -31,21 +31,32 @@
         alt="cinemadrip logo"
         width="100"
         height="100"
-        class="m-auto block"
+        class="m-auto block max-sm:hidden"
       />
     </div>
     <!-- profile and search icon buttons -->
     <div class="flex items-center gap-5">
       <!-- search icon -->
-      <button>
-        <img
-          src="/Images/searchIcon.png"
-          width="100"
-          height="100"
-          alt="cinema drip search icon"
-          class="w-12"
+      <div
+        class="bg-gradient-to-tr from-[#6260FA] to-[#00ECD4] rounded-full p-[1px] relative"
+      >
+        <input
+          type="search"
+          placeholder="Search"
+          class="rounded-full px-4 pl-12 py-3 w-60 outline-0 text-slate-500"
         />
-      </button>
+        <div
+          class="absolute inset-y-0 left-0 px-3 flex items-center pointer-events-none"
+        >
+          <img
+            src="/Images/searchIcon.png"
+            width="100"
+            height="100"
+            alt="cinema drip search icon"
+            class="w-8"
+          />
+        </div>
+      </div>
       <!-- Profile icon button -->
       <div
         class="border border-[#C3C0C0] px-4 poppins py-4 rounded-full bg-white flex items-center gap-6"
