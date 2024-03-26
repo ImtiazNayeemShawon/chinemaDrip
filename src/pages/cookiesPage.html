@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Cookie page</title>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url(../../Images/cookieBG.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+      "
+      class="m-0 p-0 pb-20"
+    >
+      <!-- navigation component -->
+      <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
+        <div class="flex justify-between items-center py-4 mx-20 max-md:mx-4">
+          <!-- nav links -->
+          <button class="max-ipad:block hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill=""
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
+          </button>
+          <div class="flex gap-5 max-ipad:hidden">
+            <a href="#" class="font-semibold capitalize">Home</a>
+            <a href="#" class="font-semibold capitalize">blogs</a>
+            <a href="#" class="font-semibold capitalize">podcast</a>
+            <a href="#" class="font-semibold capitalize">spotlight series</a>
+          </div>
+          <!-- logo -->
+          <div class="">
+            <img
+              src="/Images/logo.png"
+              alt="cinemadrip logo"
+              width="100"
+              height="100"
+              class="m-auto block"
+            />
+          </div>
+          <!-- login/singup buttons -->
+          <div class="flex items-center gap-2">
+            <!-- search icon -->
+            <button>
+              <img
+                src="/Images/searchIcon.png"
+                width="100"
+                height="100"
+                alt="cinema drip search icon"
+                class="w-12"
+              />
+            </button>
+            <!-- login button -->
+            <div
+              class="rounded-full bg-gradient-to-r from-[#00ECD4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
+            >
+              <button
+                class="bg-white text-blue-400 px-10 py-3 m-[3px] uppercase rounded-full ppoppins"
+              >
+                log in
+              </button>
+            </div>
+            <!-- singup button -->
+            <button
+              class="shadow-lg px-10 poppins py-4 rounded-full bg-gradient-to-r from-[#68E7D4] via-[#55A8DD] to-[#6260FA] uppercase font-medium text-white max-sm:hidden"
+            >
+              sign up
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="mx-40 max-md:mx-5 mt-10">
+        <h1
+          class="text-primarytext poppins text-[40px] text-center font-semibold capitalize"
+        >
+          Cookies and the GDPR
+        </h1>
+        <p
+          class="text-primarytext poppins text-center text-[16px] mt-5 font-[300]"
+        >
+          The General Data Protection Regulation (GDPR) is the most
+          comprehensive data protection legislation that has been passed by any
+          governing body to this point. However, throughout its’ 88 pages, it
+          only mentions cookies directly once, in Recital 30.
+        </p>
+        <!-- accordions -->
+        <div class="mt-20">
+          <p class="font-bold poppins text-primarytext py-2">Cookies</p>
+          <div class="bg-primarytext h-[1px] w-full"></div>
+
+          <!-- cookie accordion : 1 -->
+          <div
+            class="flex w-full justify-between max-ipad:flex-wrap max-ipad:gap-5 items-start my-10"
+          >
+            <div id="accordion-toggle" class="flex gap-10 w-96 max-sm:w-fit">
+              <button>
+                <img src="/Images/accordionIcon.png" alt="" class="w-2" />
+              </button>
+              <p class="text-xl max-sm:text-sm font-bold">
+                Cookies and ePrivacy Directive
+              </p>
+            </div>
+            <div id="accordion-content" class="hidden w-[50%] max-ipad:w-full">
+              <p class="text-primarytext text-lg poppins font-light">
+                Passed in the 2002 and amended in 2009, the ePrivacy Directive
+                (EPD) has become known as the “cookie law” since its most
+                notable effect was the proliferation of cookie consent pop-ups
+                after it was passed.
+              </p>
+            </div>
+            <div class="flex gap-5">
+              <p>Accept</p>
+              <input type="checkbox" class="toggle" />
+            </div>
+          </div>
+
+          <!-- cookie accordion : 2 -->
+          <div
+            class="flex w-full justify-between max-ipad:flex-wrap max-ipad:gap-5 items-start my-10"
+          >
+            <div id="accordion-toggle2" class="flex gap-10 w-96 max-sm:w-fit">
+              <button>
+                <img src="/Images/accordionIcon.png" alt="" class="w-2" />
+              </button>
+              <p class="text-xl max-sm:text-sm font-bold">Cookie compliance</p>
+            </div>
+            <div id="accordion-content2" class="hidden w-[50%] max-ipad:w-full">
+              <p class="text-primarytext text-lg poppins font-light">
+                To comply with the regulations governing cookies under the GDPR
+                and the ePrivacy Directive you must:
+              </p>
+              <ul
+                class="text-primarytext text-sm list-disc mt-2 flex flex-col gap-4 poppins font-light"
+              >
+                <div class="flex gap-10">
+                  <li>
+                    Receive users’ consent before you use any cookies except
+                    strictly necessary cookies
+                  </li>
+                  <input type="checkbox" class="toggle" />
+                </div>
+                <div class="flex justify-between">
+                  <li>
+                    Provide accurate and specific information about the data
+                    each cookie tracks and its purpose in plain language before
+                    consent is received.
+                  </li>
+                  <input type="checkbox" class="toggle" />
+                </div>
+                <div class="flex justify-between">
+                  <li>Document and store consent received from users.</li>
+                  <input type="checkbox" class="toggle" />
+                </div>
+                <div class="flex justify-between">
+                  <li>
+                    Allow users to access your service even if they refuse to
+                    allow the use of certain cookies
+                  </li>
+                  <input type="checkbox" class="toggle" />
+                </div>
+              </ul>
+            </div>
+            <div class="flex gap-5">
+              <p>Accept</p>
+              <input type="checkbox" class="toggle" />
+            </div>
+          </div>
+          <!-- cookie accordion : 3 -->
+          <div
+            class="flex w-full items-start justify-between max-ipad:flex-wrap max-ipad:gap-5 my-10"
+          >
+            <div id="accordion-toggle3" class="flex gap-10 w-96 max-sm:w-fit">
+              <button>
+                <img src="/Images/accordionIcon.png" alt="" class="w-2" />
+              </button>
+              <p class="text-xl max-sm:text-sm font-bold">
+                ePrivacy Regulation
+              </p>
+            </div>
+            <div id="accordion-content3" class="hidden w-[50%] max-ipad:w-full">
+              <p class="text-primarytext text-lg poppins font-light">
+                The EPD’s eventual replacement, the ePrivacy Regulation (EPR),
+                will build upon the EPD and expand its definitions. (In the EU,
+                a directive must be incorporated into national law by EU
+                countries while a regulation becomes legally binding throughout
+                the EU the date it comes into effect.)
+              </p>
+              <p class="text-primarytext my-6 text-sm poppins font-light">
+                The EPR was supposed to be passed in 2018 at the same time as
+                the GDPR came into force. The EU obviously missed that goal, but
+                there are drafts of the document online, and it is scheduled to
+                be finalized sometime this year even though there is no still
+                date for when it will be implemented. The EPR promises to
+                address browser fingerprinting in ways that are similar to
+                cookies, create more robust protections for metadata, and take
+                into account new methods of communication, like WhatsApp.
+              </p>
+              <p class="text-primarytext my-6 text-sm poppins font-light">
+                The rules regulating cookies are still being set, and cookies
+                themselves are continually evolving, which means maintaining a
+                current cookie policy will be a continuous job. However,
+                properly informing your users about the cookies your site is
+                using and, when necessary, receiving their consent will keep
+                your users happy and keep you GDPR-compliant.
+              </p>
+            </div>
+            <div class="flex gap-5">
+              <p>Accept</p>
+              <input type="checkbox" class="toggle" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-20">
+          <p class="font-bold poppins text-primarytext py-2">GDPR</p>
+          <div class="bg-primarytext h-[1px] w-full"></div>
+          <p class="poppins mt-2 text-xl font-light leading-loose">
+            The General Data Protection Regulation (GDPR) is the toughest
+            privacy and security law in the world. Though it was drafted and
+            passed by the European Union (EU), it imposes obligations onto
+            organizations anywhere, so long as they target or collect data
+            related to people in the EU. The regulation was put into effect on
+            May 25, 2018. The GDPR will levy harsh fines against those who
+            violate its privacy and security standards, with penalties reaching
+            into the tens of millions of euros.
+          </p>
+          <p class="poppins mt-10 text-xl font-light leading-loose">
+            GDPR.eu is provided to you as helpful resource to quickly find all
+            99 Articles and 173 Recitals of the Regulation, as well as helpful
+            guides and checklists that walk you through how the Regulation may
+            apply to you. Here you can find the official PDF of the Regulation
+            (EU) 2016/679 (General Data Protection Regulation) in the current
+            version.
+          </p>
+        </div>
+        <!-- buttons -->
+        <div class="flex justify-center gap-10 mt-10">
+          <button
+            class="bg-[#9599BE] text-white font-semibold capitalize rounded-full w-48 py-3 shadow-lg shadow-[#2d385530]"
+          >
+            Reject all
+          </button>
+          <button
+            class="bg-gradient-to-tr from-[#68E7D4] via-[#55A8DD] to-[#6260FA] text-white font-semibold capitalize rounded-full w-48 py-3 shadow-lg shadow-[#2d385530]"
+          >
+            Save settings
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#accordion-toggle").click(function () {
+          $("#accordion-content").slideToggle();
+          $(this).find("img").toggleClass("rotate-90");
+        });
+        $("#accordion-toggle2").click(function () {
+          $("#accordion-content2").slideToggle();
+          $(this).find("img").toggleClass("rotate-90");
+        });
+        $("#accordion-toggle3").click(function () {
+          $("#accordion-content3").slideToggle();
+          $(this).find("img").toggleClass("rotate-90");
+        });
+      });
+    </script>
+  </body>
+</html>
