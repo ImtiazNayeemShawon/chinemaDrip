@@ -18,11 +18,11 @@
       "
       class="m-0 p-0"
     >
-      <!--Loggedin navigation component -->
+      <!--Loggedin creators navigation component -->
       <div class="border-b bg-[#ffffff75] sticky top-1 z-10 w-full">
         <div class="flex justify-between items-center py-2 mx-20 max-md:mx-4">
           <!-- nav links -->
-          <button class="max-ipad:block hidden">
+          <button id="sidebarOpen" class="max-ipad:block hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill=""
@@ -38,11 +38,77 @@
               />
             </svg>
           </button>
+          <!-- big screen navbar -->
           <div class="flex gap-5 max-ipad:hidden">
-            <a href="#" class="font-semibold capitalize">Home</a>
-            <a href="#" class="font-semibold capitalize">blogs</a>
-            <a href="#" class="font-semibold capitalize">podcast</a>
-            <a href="#" class="font-semibold capitalize">spotlight series</a>
+            <div class="group">
+              <a href="#" class="font-semibold capitalize w-40 rounded-full"
+                >Home</a
+              >
+              <div
+                class="hidden group-hover:flex flex-col gap-3 absolute bg-white p-4 px-8 shadow-xl shadow-[#6360fa50] rounded-2xl border"
+              >
+                <a href="#" class="font-semibold capitalize">Comedy</a>
+                <a href="#" class="font-semibold capitalize">Crime</a>
+                <a href="#" class="font-semibold capitalize">Drama</a>
+                <a href="#" class="font-semibold capitalize">Family</a>
+                <a href="#" class="font-semibold capitalize">Horror</a>
+                <a href="#" class="font-semibold capitalize">TV awards</a>
+                <a href="#" class="font-semibold capitalize">Thriller</a>
+                <a href="#" class="font-semibold capitalize">2023</a>
+              </div>
+            </div>
+
+            <div class="group">
+              <a href="#" class="font-semibold capitalize w-40 rounded-full"
+                >Blogs</a
+              >
+              <div
+                class="hidden group-hover:flex flex-col gap-3 absolute bg-white p-4 px-8 shadow-xl shadow-[#6360fa50] rounded-2xl border"
+              >
+                <a href="#" class="font-semibold capitalize">Comedy</a>
+                <a href="#" class="font-semibold capitalize">Crime</a>
+                <a href="#" class="font-semibold capitalize">Drama</a>
+                <a href="#" class="font-semibold capitalize">Family</a>
+                <a href="#" class="font-semibold capitalize">Horror</a>
+                <a href="#" class="font-semibold capitalize">TV awards</a>
+                <a href="#" class="font-semibold capitalize">Thriller</a>
+                <a href="#" class="font-semibold capitalize">2023</a>
+              </div>
+            </div>
+            <div class="group">
+              <a href="#" class="font-semibold capitalize w-40 rounded-full"
+                >Podcast</a
+              >
+              <div
+                class="hidden group-hover:flex flex-col gap-3 absolute bg-white p-4 px-8 shadow-xl shadow-[#6360fa50] rounded-2xl border"
+              >
+                <a href="#" class="font-semibold capitalize">Comedy</a>
+                <a href="#" class="font-semibold capitalize">Crime</a>
+                <a href="#" class="font-semibold capitalize">Drama</a>
+                <a href="#" class="font-semibold capitalize">Family</a>
+                <a href="#" class="font-semibold capitalize">Horror</a>
+                <a href="#" class="font-semibold capitalize">TV awards</a>
+                <a href="#" class="font-semibold capitalize">Thriller</a>
+                <a href="#" class="font-semibold capitalize">2023</a>
+              </div>
+            </div>
+            <div class="group">
+              <a href="#" class="font-semibold capitalize w-40 rounded-full"
+                >spotlight series</a
+              >
+              <div
+                class="hidden group-hover:flex flex-col gap-3 absolute bg-white p-4 px-8 shadow-xl shadow-[#6360fa50] rounded-2xl border"
+              >
+                <a href="#" class="font-semibold capitalize">Comedy</a>
+                <a href="#" class="font-semibold capitalize">Crime</a>
+                <a href="#" class="font-semibold capitalize">Drama</a>
+                <a href="#" class="font-semibold capitalize">Family</a>
+                <a href="#" class="font-semibold capitalize">Horror</a>
+                <a href="#" class="font-semibold capitalize">TV awards</a>
+                <a href="#" class="font-semibold capitalize">Thriller</a>
+                <a href="#" class="font-semibold capitalize">2023</a>
+              </div>
+            </div>
           </div>
           <!-- logo -->
           <div class="">
@@ -131,6 +197,26 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- phone screen navbar -->
+        <div
+          id="sidebar"
+          class="hidden max-ipad:block bg-white border px-8 p-4 rounded-r-xl w-[50%] h-screen absolute z-10 -translate-x-[200%] transform transition-transform duration-300"
+        >
+          <div class="flex flex-col gap-7">
+            <a href="#" class="font-semibold capitalize w-40 rounded-full"
+              >Home</a
+            >
+            <a href="#" class="font-semibold capitalize w-40 rounded-full"
+              >Blogs</a
+            >
+            <a href="#" class="font-semibold capitalize w-40 rounded-full"
+              >Podcast</a
+            >
+            <a href="#" class="font-semibold capitalize w-40 rounded-full"
+              >Spotlight Series</a
+            >
           </div>
         </div>
       </div>
@@ -1441,12 +1527,33 @@
       $(document).ready(function () {
         // Toggle the profile dropDown when the button is clicked
         $("#PofileDropDownBtn").click(function () {
-          $("#profile").slideToggle();
+          $("#profile").slideToggle("fast");
         });
       });
       // Close the profile dropdonw when close button is clicked
       $("#profileClose").click(function () {
-        $("#profile").slideUp();
+        $("#profile").slideUp("fast");
+      });
+      // sidebar toggle
+      $(document).ready(function () {
+        $("#sidebarOpen").click(function () {
+          event.stopPropagation();
+          $("#sidebar").toggleClass("translate-x-[0%]");
+          // Toggle the class to show/hide sidebar
+          $("#profile").slideUp("fast");
+        });
+      });
+
+      function closeSidebar() {
+        $("#sidebar").removeClass("translate-x-[0%]"); // Hide the sidebar
+      }
+      $(document).click(function (event) {
+        if (
+          !$(event.target).closest("#sidebar").length &&
+          !$(event.target).is("#sidebarOpen")
+        ) {
+          closeSidebar(); // Close sidebar if the click is outside of it and not on the sidebar open button
+        }
       });
     </script>
   </body>
